@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Palpite.co</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/menu.css"/>
+    <link rel="stylesheet" href="./css/form.css"/>
+</head>
+
+<body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/mask.js"></script>
+    
+    <header class="headerContent displayFlex alignItemsCenter backgroundPrimary">
+        <div id="mySidenav" class="sideNav backgroundPrimaryDark positionFixed">
+            <a class="decorationNone textColorLight displayBlock" href="javascript:void(0)" class="closeButton postionAbsolute" onclick="closeNav()">&times;</a>
+            <a class="decorationNone textColorLight displayBlock sideNavActived" id="sideNavActived" href="index.html" onclick="sideNavActived()">Início</a>
+            <a class="decorationNone textColorLight displayBlock" href="#" onclick="ticketNav()">Bilhetes</a>
+            <a class="decorationNone textColorLight displayBlock" href="#" onclick="cassinoNav()">Cassino</a>
+            <a class="decorationNone textColorLight displayBlock" href="#" onclick="profileNav()">Perfil</a>
+        </div>
+        
+        <nav>
+            <div class="navContent">
+                <span class="hamburguer textColorLight cursorPointer" onclick="openNav()">&#9776</span>
+                <a class="logo fontRighteous decorationNone colorSecundary positionRelative cursorPointer" href="index.html">Palpite.co</a>
+                <div class="divButtonsNav displayInlineBlock positionAbsolute">
+                    <a class="loginNavButton decorationNone textColorLight fontBold cursorPointer floatRight" href="#" onclick="loginButton()">Login</a>
+                    <a class="registerNavButton decorationNone textColorLight fontBold cursorPointer floatRight" href="#" onclick="registerButton()">Registre-se</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="loginID" class="modal positionFixed displayNone">
+        <span class="buttonClose textColorLight positionAbsolute fontBold cursorPointer" onclick="closerButton()">&times;</span>
+        <form class="loginContainer backgroundPrimary animate">
+            <div class="loginContent posi">
+                <h1 class="textColorSecundary fontRighteous">Faça Login</h1>
+                <p class="textColorGrey">Faça login para acessar sua conta</p>
+            </div>
+            <div>
+                <label class="textColorLight" for="cpf">CPF:</label>
+                <input class="displayInlineBlock borderBox" type="text" name="cpf" maxlength="14" onkeyup="handleCPF(event)" id="CPFID" placeholder="Digite seu CPF..." required/>
+                <label class="textColorLight" for="password">Senha:</label>
+                <input class="displayInlineBlock borderBox" type="password" name="password" id="passwordID" placeholder="Digite sua Senha..." required />
+                    <i class="togglePassword bi bi-eye-slash cursorPointer positionRelative floatRight" id="togglePasswordID" onclick="togglePassword()"></i>
+                <label class="textColorLight">
+                    <input type="checkbox" name="remeber" checked="checked"/>Salvar Usuário
+                </label>
+                <button class="loginButton backgroundSecundary fontBold cursorPointer textColorLight borderNone" onclick="accountLoginMSG();" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="loginContainer backgroundPrimaryDark animate">
+            <button class="cancelButton textColorLight borderNone backgroundRed" type="button" onclick="closerButton()">Cancelar</button>
+            <span class="forgotPassword textColorLight">Esqueceu a senha? <a href="#" class="resetPassword textColorSecundary cursorPointer decorationNone fontBold">Redefinir</a></span>
+        </div>
+    </div>
+    
+     <div id="registerID" class="modal positionFixed displayNone">
+        <span class="buttonClose textColorLight positionAbsolute fontBold cursorPointer" onclick="closerRButton()">&times;</span>
+        <form class="loginContainer backgroundPrimary animate">
+            <div class="loginContent positionRelative">
+                <h1 class="textColorSecundary fontRighteous">Registre-se</h1>
+                <p class="textColorGrey">Faça registro para criar sua conta</p>
+            </div>
+            <div>
+                <div class="tab0 displayBlock" id="tab0ID">
+                    <label class="textColorLight" for="firstName">Nome:</label>
+                    <input class="displayInlineBlock borderBox" type="text" name="name" id="nameID" placeholder="Nome Completo..." required />
+                </div>
+                <div class="tab1 displayNone" id="tab1ID">
+                    <label class="textColorLight" for="contact">Número:</label>
+                    <input class="displayInlineBlock borderBox" type="tel" maxlength="15" onkeyup="handlePhone(event)" name="phone" id="phoneID" placeholder="Celular..." required/>
+                </div>
+                <div class="tab2 displayNone" id="tab2ID">
+                    <label class="textColorLight" for="cpf">CPF:</label>
+                    <input class="displayInlineBlock borderBox" type="text" name="cpf" onkeyup="handleCPF(event)" onblur="validarCPF(cpf)" maxlength="14" id="cpfID" placeholder="CPF..." required/>
+                </div>
+                <div class="tab3 displayNone" id="tab3ID">
+                    <label class="textColorLight" for="info">Senha:</label>
+                    <input type="password" class="displayInlineBlock borderBox" name="password" id="senhaID" placeholder="Senha..." required/>
+                    <div class="termsDIV displayBlock textCenter">
+                        <span class="textColorLight floatLeft">Ao criar a conta, você concorda com nossos <a href="#" class="textColorSecundary cursorPointer decorationNone fontBold">Termos & Serviços</a></span>
+                        <i class="toggleRPassword bi bi-eye-slash cursorPointer positionRelative floatRight" id="toggleRPasswordID" onclick="toggleRPassword()"></i>
+                    </div>
+                </div>
+                <div class="tab4 displayNone" id="tab4ID">
+                    <label class="textColorLight" for="date">Nascimento:</label>
+                    <input type="date" class="displayInlineBlock borderBox" name="date" id="dateID" value="2000-01-01" required/>
+                </div>
+                <div class="tab5 displayNone" id="tab5ID">
+                    <label class="textColorLight" for="date">Endereço:</label>
+                    <input type="text" class="displayInlineBlock borderBox" id="cepID" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="CEP..." required/>
+                </div>
+                <div class="tab6 displayNone" id="tab6ID">
+                    <h1 class="textColorLight fontRighteous">Conta Criada:</h1>
+                    <h2 class="textColorLight">Estamos quase lá... Agora só apertar no botão de registrar é você estará pronto para usar a sua conta!</h2>
+                </div>
+                <span class="textColorLight fontBold textCenter" id="warningID"></span>
+                <button class="nextButton backgroundSecundary fontBold cursorPointer textColorLight borderNone" type="button" onclick="nextButton()" id="nextButtonID">Próximo</button>
+                <button class="registerRButton backgroundSecundary fontBold cursorPointer textColorLight borderNone displayNone" type="submit" onclick="accountCreateMSG()" id="registerRButtonID">Register</button>
+            </div>
+        </form>
+        <div class="loginContainer backgroundPrimaryDark textCenter animate">
+            <button class="previousButton textColorLight borderNone backgroundSecundary cursorPointer fontBold displayNone" type="button" onclick="previousButton()" id="previousButtonID">Voltar</button>
+            <span class="step0 stepActive borderNone displayInlineBlock" id="step0ID"></span>
+            <span class="step1 borderNone displayInlineBlock" id="step1ID"></span>
+            <span class="step2 borderNone displayInlineBlock" id="step2ID"></span>
+            <span class="step3 borderNone displayInlineBlock" id="step3ID"></span>
+            <span class="step4 borderNone displayInlineBlock" id="step4ID"></span>
+            <span class="step5 borderNone displayInlineBlock" id="step5ID"></span>
+            <span class="step6 borderNone displayInlineBlock" id="step6ID"></span>
+        </div>
+    </div>
+</body>
+
+</html>

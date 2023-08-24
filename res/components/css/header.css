@@ -1,0 +1,31 @@
+/* LAYOUT */
+header.header {
+    background: var(--color-dark);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    width: 100%;
+}
+
+/*? TEXT */
+header .logo {
+    color: var(--color-logo);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    text-decoration: none;
+}
+
+/*? ICON */
+header.header .menu, header.header .profile {
+    color: var(--color-light);
+    cursor: pointer;
+
+    font-size: clamp(1rem, 1rem + 2vw, 1.5rem);
+
+    margin: clamp(0.125rem, 1rem + 2vw, 0.625rem);
+} 

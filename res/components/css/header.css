@@ -8,8 +8,18 @@ header.header {
     justify-content: space-between;
     align-items: center;
 
+    z-index: 0;
     height: auto;
     width: 100%;
+}
+
+.modal .left-bar {
+    background: var(--color-black);
+    box-shadow: 7px 17px 18px var(--color-light);
+
+    z-index: inherit;
+    height: 100vh;
+    width: clamp(45vw, 2vw + 2vw , 50vw);
 }
 
 /*? TEXT */

@@ -1,0 +1,119 @@
+/* HEADER - LAYOUT */
+header.header {
+    background: var(--color-dark);
+    box-shadow: 0 1px 2px var(--color-gray);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    width: 100%;
+    z-index: 0;
+}
+
+/* LEFTBAR - LAYOUT */
+.modal .left-bar {
+    background: var(--color-black);
+    
+    display: grid;
+    grid-template-rows: auto 1fr       
+     1fr 1fr auto;
+    grid-template-columns: auto ;
+    grid-template-areas: 
+    'leftbar-top'
+    'leftbar-header'
+    'leftbar-main'
+    'leftbar-bottom'
+    'leftbar-footer';
+
+    height: 100vh;
+    width: clamp(45vw, 2vw + 2vw , 50vw);
+    z-index: inherit;
+}
+ 
+.left-bar .top, .left-bar .header, .left-bar .main, .left-bar .bottom, .left-bar .footer {
+    background: var(--color-dark);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px var(--color-gray);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    margin: clamp(0.10625rem, 0.003125rem + 2vw, 0.15625rem) clamp(0.2625rem, 0.00625rem + 2vw, 0.3125rem);
+    padding: 5px;
+}
+
+.left-bar .top {
+    justify-content: space-around;
+    grid-area: leftbar-top;
+}
+
+.left-bar .header {
+    grid-area: leftbar-header;
+}
+
+.left-bar .main {
+    grid-area: leftbar-main;
+}
+
+.left-bar .bottom {
+    grid-area: leftbar-bottom;
+}
+
+.left-bar .footer {
+    grid-area: leftbar-footer;
+}
+
+/*? HEADER - TEXT */
+header .logo {
+    color: var(--color-logo);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 0.5rem + 2vw, 2rem);
+    text-decoration: none;
+}
+
+/*? LEFTBAR - TEXT */
+.modal .left-bar .logo {
+    color: var(--color-logo);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 0.5rem + 2vw, 2rem);
+    text-decoration: none;
+}
+
+/*? HEADER - ICON */
+header.header .menu, header.header .profile {
+    color: var(--color-light);
+    cursor: pointer;
+    transition: color .3s ease-in;
+
+    font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);
+
+    margin: clamp(0.125rem, 0.5rem + 2vw, 0.625rem);
+} 
+
+/*? LEFTBAR - ICON */
+.modal .left-bar .x-mark {
+    color: var(--color-light);
+    cursor: pointer;
+    transition: color .3s ease-in;
+
+    font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);
+
+    margin: clamp(0.125rem, 0.5rem + 2vw, 0.625rem);
+}
+
+/*! HEADER - HOVER */
+header.header .menu:hover, header.header .profile:hover {
+    color: var(--color-primary);
+}
+
+/*! LEFTBAR - HOVER */
+.modal .left-bar .x-mark:hover {
+    color: var(--color-primary);
+}

@@ -9,6 +9,7 @@
     <title>Palpite.co - Site de Apostas</title>
 
     <!-- CSS - IMPORT -->
+    <link rel="stylesheet" href="./res/normalize-8.0.1/normalize.css">
     <link rel="stylesheet" href="./res/components/css/footer.css">
     <link rel="stylesheet" href="./res/components/css/header.css">
     <link rel="stylesheet" href="./res/components/css/styles.css">
@@ -17,40 +18,48 @@
     <!-- HEADER -->
     <header class="header">
         <!-- HEADER - MENU -->
-        <i class="menu fa-solid fa-bars-staggered"></i>
+        <i class="menu fa-solid fa-bars-staggered" id="menuID"></i>
         <!-- HEADER - LOGO -->
         <a class="logo" href="index.html">PALPITE.<span style="color: #0073e6;">CO</span></a>
         <!-- HEADER - PROFILE -->
-        <i class="profile fa-regular fa-circle-user"></i>
+        <i class="profile fa-regular fa-circle-user" id="profileID"></i>
     </header>
 
-    <div class="modal">
-        <aside class="left-bar">
-            teste
+    <!-- MODAL -->
+    <div class="modal" id="modalID">
+        <!-- MODAL - LEFTBAR -->
+        <aside class="left-bar" id="leftBarID">
+            <div class="top">
+                <a class="logo" id="logoID" href="index.html">PALPITE.<span id="logoSpanID" style="color: #0073e6;">CO</span></a>
+                <i class="x-mark fa-regular fa-circle-xmark" id="x-markID"></i>
+            </div>
+            <div class="header">
+                teste
+            </div>
+            <div class="main">
+                teste
+            </div>
+            <div class="bottom">
+                teste
+            </div>
+            <div class="footer">
+                Teste
+            </div>
         </aside>
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="icons-footer">
-            <div class="icon-box">
-                <i class="fa-regular fa-futbol"></i>
-            </div>
-            
-            <div class="icon-box">
-                <i class="fa-regular fa-futbol"></i>
-            </div>
-            
-            <div class="icon-box">
-                <i class="fa-regular fa-futbol"></i>
-            </div>
-            
-            <div class="icon-box">
-                <i class="fa-regular fa-futbol"></i>
-            </div>
-        </div>
+        <!-- FOOTER - HOME -->
+        <a class="footer-item" href="index.html">
+            <i class="fa-solid fa-home"></i>
+            <p>Inicio</p>
+        </a>
     </footer>
     
     <!-- FONTAWESOME - IMPORT -->
     <script src="https://kit.fontawesome.com/d6a9ef8e96.js" crossorigin="anonymous"></script>
+    <!-- JS - IMPORT -->
+    <script src="./res/components/js/header.js"></script>
 </body>
 </html>

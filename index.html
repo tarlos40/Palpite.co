@@ -8,30 +8,31 @@
     <!--- TITLE -->
     <title>Palpite.co - Site de Apostas</title>
 
+    <!-- NORMALIZE - IMPORT -->
+    <link rel="stylesheet" href="./vendor/normalize-8.0.1/normalize.css">
     <!-- CSS - IMPORT -->
-    <link rel="stylesheet" href="./res/normalize-8.0.1/normalize.css">
-    <link rel="stylesheet" href="./res/components/css/footer.css">
-    <link rel="stylesheet" href="./res/components/css/header.css">
-    <link rel="stylesheet" href="./res/components/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <!-- HEADER - MENU -->
-        <i class="menu fa-solid fa-bars-staggered" id="menuID"></i>
+        <i class="icon fa-solid fa-bars-staggered"></i>
         <!-- HEADER - LOGO -->
         <a class="logo" href="index.html">PALPITE.<span style="color: #0073e6;">CO</span></a>
         <!-- HEADER - PROFILE -->
-        <i class="profile fa-regular fa-circle-user" id="profileID"></i>
+        <i class="icon fa-regular fa-circle-user"></i>
     </header>
 
     <!-- MODAL -->
-    <div class="modal" id="modalID">
+    <div class="modal">
         <!-- MODAL - LEFTBAR -->
-        <aside class="left-bar" id="leftBarID">
+        <aside class="left-bar">
             <div class="top">
-                <a class="logo" id="logoID" href="index.html">PALPITE.<span id="logoSpanID" style="color: #0073e6;">CO</span></a>
-                <i class="x-mark fa-regular fa-circle-xmark" id="x-markID"></i>
+                <a class="logo" href="index.html">PALPITE.<span class="logo" style="color: #0073e6;">CO</span></a>
+                <i class="icon fa-regular fa-circle-xmark" id="x-markID"></i>
             </div>
             <div class="header">
                 teste
@@ -51,15 +52,31 @@
     <!-- FOOTER -->
     <footer class="footer">
         <!-- FOOTER - HOME -->
-        <a class="footer-item" href="index.html">
+        <a class="footer-item active" href="#">
             <i class="fa-solid fa-home"></i>
             <p>Inicio</p>
+        </a>
+        <!-- FOOTER - FOOTBALL -->
+        <a class="footer-item" href="#">
+            <i class="fa-regular fa-futbol"></i>
+            <p>Futebol</p>
+        </a>
+        <!-- FOOTER - BASKETBALL -->
+        <a class="footer-item" href="#">
+            <i class="fa-solid fa-basketball"></i>
+            <p>Basquete</p>
+        </a>
+        <!-- FOOTER - CASINO -->
+        <a class="footer-item" href="#">
+            <i class="fa-solid fa-dice"></i>
+            <p>Cassino</p>
         </a>
     </footer>
     
     <!-- FONTAWESOME - IMPORT -->
     <script src="https://kit.fontawesome.com/d6a9ef8e96.js" crossorigin="anonymous"></script>
     <!-- JS - IMPORT -->
-    <script src="./res/components/js/header.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/header.js"></script>
 </body>
 </html>

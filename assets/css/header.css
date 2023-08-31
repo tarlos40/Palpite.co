@@ -28,7 +28,7 @@ header.header {
     'leftbar-main'
     'leftbar-bottom'
     'leftbar-footer';
-    
+    animation: slideToRigth 700ms forwards;
     height: 100vh;
     width: clamp(45vw, 2vw + 2vw , 50vw);
     z-index: inherit;

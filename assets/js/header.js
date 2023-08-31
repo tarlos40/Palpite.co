@@ -27,7 +27,7 @@ logo[1].addEventListener('mousemove', (e) => {
     const x = (offsetX / offsetWidth) * 255;
     const y = (offsetY / offsetHeight) * 255;
   
-    logo[1].style.background = `radial-gradient(circle at ${x}% ${y}%, #0073e6, transparent)`;
+    logo[1].style.color = `radial-gradient(circle at ${x}% ${y}%, #0073e6, transparent)`;
     const color = `rgb(${x}, ${y}, 0)`;
     logo[1].style.color = color;
     logo[2].style.color = color;

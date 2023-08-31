@@ -16,6 +16,8 @@ header.header {
 
 /* LEFTBAR - LAYOUT */
 .modal .left-bar {
+    animation: slideToRigth 700ms forwards;
+
     background: var(--color-black);
     
     display: grid;
@@ -29,7 +31,6 @@ header.header {
     'leftbar-bottom'
     'leftbar-footer';
 
-    animation: slideToRigth 700ms forwards;
     height: 100vh;
     width: clamp(45vw, 2vw + 2vw , 50vw);
     z-index: inherit;
@@ -108,6 +109,17 @@ header.header .icon {
 
     margin: clamp(0.125rem, 0.5rem + 2vw, 0.625rem);
 }
+
+/*! LEFTBAR - ANIMATION */
+@keyframes slideToRigth{
+    0%{
+        transform: translateX(-50%);
+    }
+  
+    100%{
+        transform: translateX(0%);
+    }
+  }
 
 /*! HEADER - HOVER */
 header.header .icon:hover {

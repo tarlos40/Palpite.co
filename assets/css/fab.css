@@ -10,9 +10,40 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     font-size: clamp(1rem, .5rem + 2vw , 1.5rem);
 
     width: clamp(2.5rem, .5rem + 2vw, 3rem);
     height:  clamp(2.5rem, .5rem + 2vw, 3rem);
+}
+
+/*? FAB - TEXT */
+.fab p {
+    font-size: clamp(.5rem, .5rem + 2vw, 1rem);
+    font-family: var(--font-primary);
+
+    float: right;
+}
+
+.fab button.active {
+    animation: flash infinite .5s ease forwards;
+}
+
+/*! FAB - ANIMATION */
+@keyframes flash {
+    0% {
+        box-shadow: 0px 0px 0px var(--color-primary);
+    }
+
+    50%{
+        box-shadow: 0px 0px 20px var(--color-primary);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px var(--color-primary);
+    }
 }

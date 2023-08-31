@@ -52,12 +52,11 @@ html {
     justify-content: stretch;
     align-items: stretch;
     scroll-behavior: smooth;
-    height: 100%;
-    width: 100%;
-    display: flex;
+    
+    height: calc(100vh - 7vh);
+    width: 100vw;
 }
 
 .active {
     display: flex;
 }
-

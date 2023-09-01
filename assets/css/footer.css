@@ -44,7 +44,7 @@ footer.footer .footer-item>i {
 }
 
 /*! FOOTER - ACTIVE */
-footer.footer .footer-item.active>i, footer.footer .footer-item.active>p {
+footer.footer .footer-item.active> :where(i, p) {
     color: var(--color-white);
     display: flex;
 }

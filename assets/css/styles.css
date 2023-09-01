@@ -32,6 +32,21 @@ html {
     width: 100vw;
 }
 
+/* SCROLL */
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 50px;
+}
+
 /* LAYOUT */
 .modal {
     background: rgba(10, 10, 10, .5);
@@ -60,3 +75,4 @@ html {
 .active {
     display: flex;
 }
+ 

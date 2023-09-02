@@ -1,0 +1,39 @@
+/* HEADER - LAYOUT */
+header.header {
+    background: var(--color-dark);
+    box-shadow: 0 1px 2px var(--color-gray);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    width: 100%;
+    z-index: 0;
+}
+
+/*? HEADER - TEXT */
+header .logo {
+    color: var(--color-logo);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, .5rem + 2vw, 2.25rem);
+    text-decoration: none;
+}
+
+/*? HEADER - ICON */
+header.header .icon {
+    color: var(--color-light);
+    cursor: pointer;
+    transition: color .3s ease-in;
+
+    font-size: clamp(1.5rem, .5rem + 2vw, 1.75rem);
+
+    margin: 0 10px;
+} 
+
+/*! HEADER - HOVER */
+header.header .icon:hover {
+    color: var(--color-primary);
+}

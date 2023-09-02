@@ -14,14 +14,14 @@ icon_nav[1].addEventListener('mouseover', function() {
     icon_nav[1].classList.remove('fa-regular');
 });
 
-icon[1].addEventListener('mouseout', function() {
+icon_nav[1].addEventListener('mouseout', function() {
     icon_nav[1].classList.add('fa-regular');
-    icon[1].classList.remove('fa-solid');
+    icon_nav[1].classList.remove('fa-solid');
 });
 
 logo_nav[1].addEventListener('mousemove', (e) => {
     const { offsetX, offsetY } = e;
-    const { offsetWidth, offsetHeight } = logo[1];
+    const { offsetWidth, offsetHeight } = logo_nav[1];
     const x = (offsetX / offsetWidth) * 255;
     const y = (offsetY / offsetHeight) * 255;
   

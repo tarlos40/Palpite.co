@@ -50,7 +50,6 @@ footer.footer .footer-item.active> :where(i, p) {
 }
 
 /*! FOOTER - ANIMATION */
-
 footer.footer .footer-item.active{
     transition: 300ms ease-in-out;
     transform: scale(1.1);

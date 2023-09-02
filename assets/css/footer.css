@@ -31,7 +31,7 @@ footer.footer .footer-item {
 
 footer.footer .footer-item>p {
     color: var(--color-light);
-    font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
+    font-size: clamp(1rem, .5rem + 2vw, 1.25rem);
     font-family: var(--font-primary);
 
     display: none;
@@ -40,12 +40,12 @@ footer.footer .footer-item>p {
 /*? FOOTER - ICON */
 footer.footer .footer-item>i {
     color: var(--color-light);
-    font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);
+    font-size: clamp(1.36rem, .5rem + 2vw, 1.51rem);
 }
 
 /*! FOOTER - ACTIVE */
 footer.footer .footer-item.active> :where(i, p) {
-    color: var(--color-white);
+    color: var(--color-primary);
     display: flex;
 }
 

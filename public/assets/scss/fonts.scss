@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.logo {
+    color: $colorWhite;
+
+    @include font-size(2rem);
+    font-family: $fontLogo;
+    text-decoration: none;
+
+    .logo-divider {
+        color: $colorPrimary;
+    }
+}
+
+.icon {
+    color: $colorWhite;
+    cursor: pointer;
+
+    @include font-size(1.5rem);
+}
+
+.title {
+    @include font-size(2rem);
+
+    &.title-dark-primary {
+
+    }
+}

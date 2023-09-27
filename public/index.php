@@ -13,7 +13,7 @@
     <title>Palpite.co - Site de Apostas</title>
 
     <!-- GOOGLE FONTS - IMPORT -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- NORMALIZE - IMPORT -->
     <link rel="stylesheet" href="../../../vendor/normalize/normalize.css">
     <!-- CSS - IMPORT -->
@@ -24,20 +24,36 @@
     <!-- HEADER -->
     <header class="header">
         <!-- HEADER - MENU -->
-        <span class="icon material-icons-outlined">
+        <span class="icon material-symbols-outlined">
             menu
         </span>
         <!-- HEADER - LOGO -->
         <a href="index.php" class="logo">PALPITE.<span class="logo-divider">CO</span></a>
         <!-- HEADER - PROFILE -->
-        <span class="icon material-icons-outlined">
-            account_circle
+        <span class="icon material-symbols-outlined">
+            account_Circle
         </span>
     </header>
 
-    <div class="card">TEsate</div>
-
-    <script src="./assets/js/popup.js"></script>
+    <!-- FOOTER -->
+    <footer class="bottom">
+        <div class="bottom-item">
+            <span class="icon material-symbols-outlined">widgets</span>
+            <p class="text text-white">Inicio</p>
+        </div>
+        <div class="bottom-item">
+            <span class="icon material-symbols-outlined">sports_soccer</span>
+            <p class="text text-white">Futebol</p>
+        </div>
+        <div class="bottom-item">
+            <span class="icon material-symbols-outlined">sports_basketball</span>
+            <p class="text text-white">Basquete</p>
+        </div>
+        <div class="bottom-item">
+            <span class="icon material-symbols-outlined">casino</span>
+            <p class="text text-white">Cassino</p>
+        </div>
+    </footer>
 </body>
 
 </html>

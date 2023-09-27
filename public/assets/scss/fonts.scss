@@ -17,12 +17,37 @@
     cursor: pointer;
 
     @include font-size(1.5rem);
+
+    &.icon-maximed {
+        background: $colorWhite;
+        color: $colorDarkPrimary;
+        border-radius: 10px;
+        
+        @include font-size(5rem);
+    }
 }
 
 .title {
     @include font-size(2rem);
+    font-family: $fontPrimary;
 
-    &.title-dark-primary {
-
+    &.title-white {
+        color: $colorWhite;
     }
+}
+
+.text {
+    @include font-size(.875rem);
+    font-family: $fontPrimary;
+
+    &.text-white {
+        color: $colorWhite;
+    }
+}
+
+.alt {
+    color: $colorGray;
+
+    @include font-size(.875rem);
+    font-family: $fontPrimary;
 }

@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+footer.bottom {
+    background: $colorDarkPrimary;
+    box-shadow: -1px -8px 23px -1px rgba(0, 0, 0, .75);
+        -webkit-box-shadow: -1px -8px 23px -1px rgba(0, 0, 0, .75);
+        -moz-box-shadow: -1px -8px 23px -1px rgba(0, 0, 0, .75);
+
+    @include display-flex(row, space-around, center);  
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    height: auto;
+    width: 100%;
+
+    .bottom-item {
+        @include button-style($colorDarkPrimary, $colorWhite);
+        cursor: pointer;
+
+        @include display-flex(column, center, center);
+
+        padding: 10px;
+        height: auto;
+        width: 100%;
+    }
+}

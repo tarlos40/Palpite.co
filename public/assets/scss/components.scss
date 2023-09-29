@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+.input {
+    background: transparent;
+    border: 2px solid $colorWhite;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 $colorWhite;
+        -webkit-box-shadow: 0 4px 0 $colorWhite;
+        -moz-box-shadow: 0 4px 0 $colorWhite;
+        -ms-box-shadow: 0 4px 0 $colorWhite;
+        -o-box-shadow: 0 4px 0 $colorWhite;
+    color: $colorWhite;
+
+    @include font-size(.875rem);
+    font-family: $fontPrimary;
+
+    margin: 5px 0;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+.button {
+    border: 2px solid $colorBlack;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 $colorSecondary;
+        -webkit-box-shadow: 0 4px 0 $colorSecondary;
+        -moz-box-shadow: 0 4px 0 $colorSecondary;
+        -ms-box-shadow: 0 4px 0 $colorSecondary;
+        -o-box-shadow: 0 4px 0 $colorSecondary;
+    cursor: pointer;
+
+    @include font-size(.875rem);
+    font-family: $fontPrimary;
+    font-weight: bold;
+
+    margin: 5px 0;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+
+    &.button-primary {
+        @include button-style($colorPrimary, $colorWhite);    
+    }
+
+    &.button-secondary {
+        @include button-style($colorSecondary, $colorDarkPrimary);
+    }
+}
+
+.form {
+    @include display-flex(column, center, center);
+
+    padding: 10px;
+}

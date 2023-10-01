@@ -1,11 +1,10 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['id'])) {
-        header('Location: index.php');
+    if(isset($_GET['id'])) {
+        $id = $_GET['id'];
+        echo '<p>' . $id . '</p>';
     } else {
-        header('Location: login.php');
+        header('Location: ')
     }
 ?>
-
-<p>teste</p>

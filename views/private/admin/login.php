@@ -31,7 +31,7 @@
     <main class="container">
         <!-- CARD -->
         <div class="card">
-            <h1 class="title title-primary">Faça Login</h1>
+            <h1 class="title title-primary">Login Admin</h1>
             <form class="form" action="./../../../app/controllers/private/admin/loginController.php" method="post">
                 <input class="input" name="email" type="email" placeholder="E-mail" require>
                 <input class="input" name="password" type="password" placeholder="Senha" required>

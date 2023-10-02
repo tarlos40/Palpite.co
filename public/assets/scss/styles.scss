@@ -76,3 +76,7 @@ html {
         -o-box-shadow: 0 0 10px $colorBlack;
     padding: 20px;
 }
+
+.checkbox-container {
+    @include display-flex(row, stretch, center);
+}

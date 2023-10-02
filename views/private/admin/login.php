@@ -35,6 +35,10 @@
             <form class="form" action="./../../../app/controllers/private/admin/loginController.php" method="post">
                 <input class="input" name="email" type="email" placeholder="E-mail" require>
                 <input class="input" name="password" type="password" placeholder="Senha" required>
+                <div class="checkbox-container">
+                    <input class="checkbox" type="checkbox" id="showPassword">
+                    <label class="text" for="showPassword">Mostrar Senha</label>
+                </div>
                 <?php
                     if (isset($_GET['error'])) {
                         $errorMessage = $_GET['error'];
@@ -45,6 +49,8 @@
             </form>
         </div>
     </main>
+
+    <script src="./../../../public/assets/js/input.js"></script>
 </body>
 
 </html>

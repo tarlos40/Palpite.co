@@ -16,6 +16,16 @@
     }
 }
 
+@mixin check-style($background, $border) {
+    border: 2px solid $border;
+    &:checked {
+        background-image: url('https://i.postimg.cc/XN51tMCq/check.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 @mixin font-size($min-size) {
     font-size: clamp($min-size, .5vw + 2vw, $min-size + .25rem);
 }

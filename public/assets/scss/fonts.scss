@@ -63,3 +63,12 @@
     @include font-size(.875rem);
     font-family: $fontPrimary;
 }
+
+.link {
+    color: $colorPrimary;
+
+    @include font-size(.875rem);
+    font-family: $fontPrimary;
+
+    padding: 5px;
+}

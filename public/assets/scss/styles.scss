@@ -28,6 +28,15 @@ html {
     width: 100vw;
 }
 
+.container-row {
+    @include display-flex(row, center, center);
+
+    position: relative;
+
+    height: 100%;
+    width: 100vw;
+}
+
 .modal {
     background: rgba(0, 0, 0, .7);
 

@@ -1,5 +1,5 @@
 <?php
-    include __DIR__ . '/./app/config/config.php';
+    include __DIR__ . '/app/controllers/public/home/initController.php';
 ?>
 
 <html lang="pt-br">
